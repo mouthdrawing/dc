@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><%= title %></a></h1>
+    </header>
+    <section>
+      <div><%= post.title %></div>
+    </section>
+    <section>
+      <div><a href="/edit/<%= post.id %>">update</a></div>
+      <div><a href="/delete/<%= post.id %>">delete</a></div>
+    </section>
+    <section>
+      <div><%= post.image %></div>
+      <div><%= post.text %></div>
+    </section>
+  </body>
+</html>

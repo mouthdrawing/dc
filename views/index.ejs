@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><%= title %></a></h1>
+    </header>
+    <% posts.forEach(function(post){ %>
+    <ul>
+      <li><a href="view/<%= post.id %>"><%= post.title %></a></li>
+    </ul>
+    <% }); %>
+    <section class="control"></section>
+    <a href="/create">create</a>
+    <% posts.forEach(function(post){ %>
+    <section>
+      <div><%= post.image %></div>
+      <div><%= post.text %></div>
+    </section>
+    <% }); %>
+  </body>
+</html>

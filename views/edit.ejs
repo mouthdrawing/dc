@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><%= title %></a></h1>
+    </header>
+    <div>
+      <form action="/update" method="post">
+        <input type="hidden" value="<%= post.id %>" name="id" />
+        <div>
+          <label for="name">title:</label>
+          <input
+            type="text"
+            id="title"
+            value="<%= post.title %>"
+            name="title"
+            required
+          />
+        </div>
+        <div>
+          <label for="name">image:</label>
+          <input
+            type="text"
+            id="image"
+            value="<%= post.image %>"
+            name="image"
+            required
+          />
+        </div>
+        <div>
+          <label for="name">text:</label>
+          <input
+            type="text"
+            id="text"
+            value="<%= post.text %>"
+            name="text"
+            required
+          />
+        </div>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  </body>
+</html>
